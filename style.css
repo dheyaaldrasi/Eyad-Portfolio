@@ -1,0 +1,515 @@
+            :root {
+                --primary-purple: #210B5E;
+                --purple-gradient-end: #4403A9;
+                --accent-orange: #FF6600;
+                --orange-bright: #FF9800;
+                --bg-light: #F5F3FF;
+                --text-dark: #1E1B4B;
+                --text-muted: #6B7280;
+                --card-border: #E9D5FF;
+                --style-color-block: #000000;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            body {
+                background-color: var(--bg-light);
+                color: var(--text-dark);
+                line-height: 1.6;
+
+            }
+
+            header {
+                background: linear-gradient(135deg, var(--primary-purple) 2%, var(--purple-gradient-end) 98%);
+                color: #ffffff;
+                padding: 1.1rem 6%;
+                position: sticky;
+                top: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 4px solid var(--accent-orange);
+                box-shadow: 0 4px 20px rgba(33, 11, 94, 0.25);
+                z-index: 1000;
+            }
+
+            header .logo-brand {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+
+            header .logo {
+                font-size: 1.4rem;
+                font-weight: 800;
+                color: #ffffff;
+            }
+
+            header .logo span {
+                color: var(--orange-bright);
+            }
+
+            header .company-tag {
+                background: linear-gradient(90deg, var(--accent-orange), var(--orange-bright));
+                color: #ffffff;
+                padding: 4px 12px;
+                border-radius: 6px;
+                font-size: 0.8rem;
+                font-weight: 700;
+            }
+
+            nav a {
+                color: #E9D5FF;
+                text-decoration: none;
+                margin-right: 1.8rem;
+                font-weight: 600;
+                font-size: 0.95rem;
+                transition: color 0.3s ease;
+            }
+
+            nav a:hover {
+                color: var(--orange-bright);
+            }
+
+            /* ---------------- واجهة ملف المصمم (Hero Section with Profile) ---------------- */
+            .hero {
+                background: linear-gradient(135deg, #180647 0%, var(--primary-purple) 45%, var(--purple-gradient-end) 100%);
+                color: #ffffff;
+                padding: 5rem 6%;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .hero::before {
+                content: '';
+                position: absolute;
+                top: -50px;
+                right: -50px;
+                width: 300px;
+                height: 300px;
+                background: rgba(255, 102, 0, 0.15);
+                border-radius: 50%;
+                filter: blur(70px);
+            }
+
+            .hero-container {
+                max-width: 1100px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                gap: 3.5rem;
+                flex-wrap: wrap;
+                position: relative;
+                z-index: 2;
+            }
+
+            /* إطار الصورة الشخصية الاحترافي */
+            .profile-wrapper {
+                position: relative;
+                flex-shrink: 0;
+                margin: 0 auto;
+
+            }
+
+
+            .profile-img-container {
+                width: 240px;
+                height: 240px;
+                border-radius: 50%;
+                padding: 6px;
+                background: linear-gradient(135deg, var(--accent-orange), var(--orange-bright), var(--primary-purple));
+                box-shadow: 0 12px 30px rgba(255, 102, 0, 0.35);
+                position: relative;
+            }
+
+            .profile-img-placeholder {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: #2E1065;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+                border: 3px solid #180647;
+                overflow: hidden;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .profile-img-placeholder img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .profile-img-placeholder span {
+                font-size: 0.85rem;
+                color: var(--orange-bright);
+                font-weight: 700;
+                margin-top: 6px;
+            }
+
+            .experience-badge {
+                position: absolute;
+                bottom: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(90deg, var(--accent-orange), var(--orange-bright));
+                color: #ffffff;
+                padding: 5px 16px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                font-weight: 800;
+                white-space: nowrap;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            /* النص التعريفي بالمصمم */
+            .profile-text {
+                flex: 1;
+                min-width: 300px;
+            }
+
+            .profile-text .tagline {
+                display: inline-block;
+                color: var(--orange-bright);
+                font-weight: 700;
+                font-size: 1.05rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .profile-text h1 {
+                font-size: 2.5rem;
+                font-weight: 800;
+                margin-bottom: 1.2rem;
+                line-height: 1.25;
+            }
+
+            .profile-text h1 span {
+                color: var(--orange-bright);
+                background: -webkit-linear-gradient(45deg, #FFB703, var(--accent-orange));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .profile-text p {
+                font-size: 1.1rem;
+                color: #DDD6FE;
+                line-height: 1.85;
+                margin-bottom: 1.8rem;
+            }
+
+            .skills-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .skill-chip {
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(233, 213, 255, 0.25);
+                color: #ffffff;
+                padding: 6px 16px;
+                border-radius: 20px;
+                font-size: 0.88rem;
+                font-weight: 600;
+                transition: all 0.3s ease;
+            }
+
+            .skill-chip:hover {
+                background: var(--accent-orange);
+                border-color: var(--accent-orange);
+            }
+
+            /* ---------------- الأقسام العامة ---------------- */
+            section {
+                padding: 4.5rem 6%;
+            }
+
+            .section-title {
+                text-align: center;
+                font-size: 2.1rem;
+                margin-bottom: 2.5rem;
+                color: var(--primary-purple);
+                font-weight: 800;
+            }
+
+            .section-title::after {
+                content: '';
+                display: block;
+                width: 75px;
+                height: 4px;
+                background: linear-gradient(90deg, var(--primary-purple), var(--accent-orange));
+                margin: 0.6rem auto 0 auto;
+                border-radius: 4px;
+            }
+
+            /* ---------------- شبكة المجلدات / الكروت ---------------- */
+            .portfolio-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .folder-card {
+                background-color: #ffffff;
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0 8px 20px rgba(33, 11, 94, 0.08);
+                border: 2px solid var(--card-border);
+                transition: all 0.3s ease;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .folder-card:hover {
+                transform: translateY(-8px);
+                border-color: var(--accent-orange);
+                box-shadow: 0 14px 28px rgba(255, 102, 0, 0.2);
+            }
+
+            .folder-badge {
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                background: var(--accent-orange);
+                color: #ffffff;
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 0.8rem;
+                font-weight: 700;
+                z-index: 5;
+            }
+
+            .folder-cover {
+                width: 100%;
+                height: 190px;
+                background: linear-gradient(135deg, var(--primary-purple) 0%, var(--purple-gradient-end) 100%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+                border-bottom: 3px solid var(--accent-orange);
+            }
+
+            .folder-cover .icon {
+                font-size: 3rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .folder-cover .overlay-btn {
+                background: rgba(255, 102, 0, 0.95);
+                color: #ffffff;
+                padding: 8px 18px;
+                border-radius: 25px;
+                font-size: 0.85rem;
+                font-weight: 700;
+                opacity: 0;
+                transform: translateY(10px);
+                transition: all 0.3s ease;
+            }
+
+            .folder-card:hover .folder-cover .overlay-btn {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .folder-body {
+                padding: 1.4rem;
+            }
+
+            .folder-body h3 {
+                font-size: 1.25rem;
+                color: var(--primary-purple);
+                margin-bottom: 0.4rem;
+                font-weight: 700;
+            }
+
+            .folder-body p {
+                color: var(--text-muted);
+                font-size: 0.9rem;
+            }
+
+            /* ---------------- النافذة المنبثقة (MODAL / LIGHTBOX) ---------------- */
+            .modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(15, 4, 43, 0.85);
+                backdrop-filter: blur(8px);
+                z-index: 2000;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .modal.active {
+                display: flex;
+                opacity: 1;
+            }
+
+            .modal-container {
+                background: #ffffff;
+                width: 100%;
+                max-width: 950px;
+                max-height: 85vh;
+                border-radius: 18px;
+                overflow-y: auto;
+                position: relative;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            }
+
+            .modal-header {
+                background: linear-gradient(90deg, var(--primary-purple), var(--purple-gradient-end));
+                color: #ffffff;
+                padding: 1.3rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                border-bottom: 3px solid var(--accent-orange);
+            }
+
+            .close-btn {
+                background: rgba(255, 255, 255, 0.2);
+                color: #ffffff;
+                border: none;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+
+            .close-btn:hover {
+                background: var(--accent-orange);
+            }
+
+            .modal-body {
+                padding: 2rem;
+            }
+
+            .modal-gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .gallery-item {
+                background: #F3E8FF;
+                border: 2px dashed #D8B4FE;
+                border-radius: 12px;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .gallery-item-placeholder {
+                color: var(--primary-purple);
+                font-size: 0.95rem;
+                font-weight: 700;
+
+            }
+
+            .gallery-item-placeholder span {
+                display: block;
+                margin-top: 5px;
+                font-size: 0.8rem;
+                color: var(--accent-orange);
+                width: 30PX;
+            }
+
+            /* ---------------- قسم التواصل ---------------- */
+            .contact-section {
+                background: linear-gradient(135deg, #180647 0%, var(--primary-purple) 100%);
+                color: #ffffff;
+            }
+
+            .contact-section .section-title {
+                color: #ffffff;
+            }
+
+            .contact-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2.5rem;
+                justify-content: space-between;
+                max-width: 950px;
+                margin: 0 auto;
+            }
+
+            .contact-info,
+            .contact-form {
+                flex: 1;
+                min-width: 290px;
+            }
+
+            .contact-info h3 {
+                font-size: 1.5rem;
+                color: var(--orange-bright);
+                margin-bottom: 1rem;
+            }
+
+            .contact-detail-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 1rem;
+                background: rgba(255, 255, 255, 0.07);
+                padding: 0.9rem 1.2rem;
+                border-radius: 10px;
+                border-right: 4px solid var(--accent-orange);
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%;
+                padding: 0.95rem 1.1rem;
+                margin-bottom: 1.2rem;
+                border: 1px solid #5B21B6;
+                border-radius: 8px;
+                background-color: #2E1065;
+                color: #ffffff;
+            }
+
+            .contact-form button {
+                background: linear-gradient(90deg, var(--accent-orange) 0%, var(--orange-bright) 100%);
+                color: #ffffff;
+                border: none;
+                padding: 1rem 2rem;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: 700;
+                font-size: 1rem;
+                width: 100%;
+            }
+
+            /* ---------------- الفوتر ---------------- */
+            footer {
+                background-color: #0F042B;
+                color: #A78BFA;
+                text-align: center;
+                padding: 1.5rem;
+                font-size: 0.9rem;
+            }

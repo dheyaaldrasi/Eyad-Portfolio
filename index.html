@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Profilo Eng.Eyad AL-Drais</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-brand">
+            <div class="logo">معرض <span>أعمالي</span></div>
+            <span class="company-tag">تأثير للدعاية والإعلان</span>
+            <img src="./logo/شعار.png" alt="" style="width: 60px; height: 65px;">
+        </div>
+        <nav>
+            <a href="#about">عني</a>
+            <a href="#folders">أقسام الأعمال</a>
+            <a href="#contact">التواصل</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="about">
+        <div class="hero-container">
+
+            <div class="profile-wrapper">
+                <div class="profile-img-container">
+                    <div class="profile-img-placeholder">
+                        <img src="./image/photo_5798943489218252787_x.jpg" alt="">
+                    </div>
+                </div>
+                <div class="experience-badge">+3 سنوات خبرة</div>
+            </div>
+            <div class="profile-text">
+                <span class="tagline">أهلاً بك في عالمي البصري </span>
+                <h1>مصمم جرافيك ومبتكر <span>هويات بصرية احترافية</span></h1>
+                <p>
+                    مرحباً بكم انا إياد الظراسي مصمم جرافيك بشغف لا ينتهي ورؤية إبداعية متميزة في <strong>تأثير للدعاية
+                        والإعلان</strong>. أتمتع بخبرة واسعة وقدرة عالية على صياغة الهويات البصرية المتكاملة وتحويل
+                    الأفكار المعقدة إلى تصاميم جذابة تترك انطباعاً ثابتاً وتخلق التأثير المطلوب. أعمل بشغف دائم على
+                    تطوير العلامات التجارية وتجهيز المشاريع (المعاهد، التطبيقات، المحلات، والمطاعم) لتبدو بأفضل صورة
+                    احترافية.
+                </p>
+                <div class="skills-list">
+                    <span class="skill-chip"> بناء الهويات البصرية</span>
+                    <span class="skill-chip"> تصميم الشعارات (Logos)</span>
+                    <span class="skill-chip"> تصاميم السوشيال ميديا</span>
+                    <span class="skill-chip"> إعلانات المعاهد والمؤسسات</span>
+                    <span class="skill-chip"> المنيو وعروض المطاعم</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="folders">
+        <h2 class="section-title">معارض الأعمال والمشاريع المنظمة</h2>
+        <div class="portfolio-grid">
+
+            <!-- 1. قسم الشعارات -->
+            <div class="folder-card" onclick="openModal('logos-modal')">
+                <span class="folder-badge">12 صورة/شعار</span>
+                <div class="folder-cover">
+                    <div class="icon">🎨<img src="">
+                        <img src="" alt="">
+                    </div>
+                    <div class="overlay-btn">استعراض الشعارات 👁️
+                        <img src="./logo/شعار.png" alt="" style="width: 50px;">
+                    </div>
+                </div>
+                <div class="folder-body">
+                    <h3>معرض الشعارات والهويات</h3>
+                    <p>ابتكار شعارات احترافية ودلائل ألوان تعبر عن روح العاطفة والاحترافية.</p>
+                </div>
+            </div>
+
+            <!-- 2. قسم المعاهد والمؤسسات -->
+            <div class="folder-card" onclick="openModal('institutes-modal')">
+                <span class="folder-badge">8 مشاريع</span>
+                <div class="folder-cover">
+                    <div class="icon">🎓</div>
+                    <div class="overlay-btn">استعراض أعمال المعاهد 👁️
+                        <img src="./image/imginstitutes/شعار مفرغ.png" alt=""><img
+                            src="./image/imginstitutes/شعار مفرغ.png" alt="">
+                    </div>
+                </div>
+                <div class="folder-body">
+                    <h3>تصاميم المعاهد والجامعات</h3>
+                    <p>بوستات الدورات، الشهادات الأكاديمية، والبروشورات التعريفية.</p>
+                    <img src="./image/imginstitutes/شعار مفرغ.png" alt="">
+                </div>
+            </div>
+
+            <!-- 3. قسم التطبيقات والشركات -->
+            <div class="folder-card" onclick="openModal('apps-modal')">
+                <span class="folder-badge">5 تطبيقات</span>
+                <div class="folder-cover">
+                    <div class="icon">📱</div>
+                    <div class="overlay-btn">استعراض التطبيقات 👁️<img src="./image/imginstitutes/شعار مفرغ.png" alt="">
+                    </div>
+                </div>
+                <div class="folder-body">
+                    <h3>تصاميم التطبيقات والمتاجر</h3>
+                    <p>واجهات المتاجر، البوستات الترويجية للتطبيق، وتصاميم السوشيال ميديا.</p>
+                </div>
+            </div>
+
+            <!-- 4. قسم المطاعم والكافيهات -->
+            <div class="folder-card" onclick="openModal('restaurants-modal')">
+                <span class="folder-badge">15 عمل</span>
+                <div class="folder-cover">
+                    <div class="icon">🍔</div>
+                    <div class="overlay-btn">استعراض المنيو والعروض 👁️
+
+                    </div>
+                </div>
+                <div class="folder-body">
+                    <h3>تصاميم المطاعم والمحلات</h3>
+                    <p>قوائم الطعام (المنيو)، بوستات الوجبات الإعلانية، والعروض اليومية.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Nوافذ العرض المنبثقة MODALS -->
+    <div class="modal" id="logos-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>معرض الشعارات والهويات البصرية</h2>
+                <button class="close-btn" onclick="closeModal('logos-modal')">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-item-placeholder"> شعار تطبيق حميل ماكس <span><img
+                                    src="./image/imginstitutes/شعار مفرغ.png" alt=""></span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-placeholder">شعار متجر إلكتروني <span>[logo2.jpg]</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم التواصل -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">تواصل معي لبدء مشروعك</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>هل لديك مشروع أو فكرة؟</h3>
+                <p>سعيد بالتواصل معك لتحويل أفكارك إلى تصاميم احترافية تبهر عملائك وتصنع الفارق.</p>
+
+                <div class="contact-detail-item">
+                    <span>جهة العمل:</span> تأثير للدعاية والإعلان (Tatheer Advertising)
+                </div>
+                <div class="contact-detail-item">
+                    <span>خدمة العملاء / التواصل:</span> 778395505
+                </div>
+                <div class="contact-detail-item">
+                    <span></span> #حيث_يبدأ_التأثير
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <input type="text" placeholder="الاسم الكامل" required>
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <textarea rows="4" placeholder="اكتب تفاصيل مشروعك أو الاستفسار المطلوب..." required></textarea>
+                    <button type="submit">إرسال الرسالة الآن</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 | معرض أعمال <strong>تأثير للدعاية والإعلان</strong></p>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+
+</html>
